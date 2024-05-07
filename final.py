@@ -192,11 +192,8 @@ class App(ctk.CTk):
 
     #####=============Deleting only the selected rectangel================########
     def delete_selected_rectangle(self,event):
-        print("hello")
         x = self.canvas.canvasx(event.x)  # Adjust for scroll position
         y = self.canvas.canvasy(event.y)
-        print(x,y)
-
         self.selected_rectangle=None
         for rect in self.rectangles:
             lx,ly,rx,ry = rect[1],rect[2],rect[3],rect[4]
